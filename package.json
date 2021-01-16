@@ -2,8 +2,14 @@
   "dependencies": {
     "@google-cloud/storage": "^5.7.2",
     "@google-cloud/vision": "^2.3.0",
+    "got": "^11.8.1",
     "natural": "^2.4.5",
+    "needle": "^2.6.0",
+    "oauth-1.0a": "^2.2.6",
     "redis": "^3.0.2",
     "redis-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
