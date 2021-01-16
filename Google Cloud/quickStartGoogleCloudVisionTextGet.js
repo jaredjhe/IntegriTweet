@@ -1,5 +1,6 @@
 
-
+// https://cloud.google.com/docs/authentication/getting-started#windows
+// export GOOGLE_APPLICATION_CREDENTIALS="/Users/rithin/WebstormProjects/Tweet-Detector-Updated/Google Cloud Credentials/rithin2/tweetdetector-2798f64a0cce.json"
 const quickstart = async () => {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
