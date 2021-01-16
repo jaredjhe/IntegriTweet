@@ -1,0 +1,16 @@
+.upload-button {
+    background-color: #00ACEE;
+    border-radius: 90px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-button p {
+    margin-right: 25px;
+    color: white;
+}
