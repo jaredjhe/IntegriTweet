@@ -20,7 +20,7 @@ header {
 
 .main .upload-area {
     width: 75%;
-    height: 60%;
+    height: 300px;
     border-radius: 90px;
     background-color: #CCF1FF;
     display: flex;
