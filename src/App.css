@@ -1,0 +1,43 @@
+.app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+}
+
+.main {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .upload-area {
+    width: 75%;
+    height: 60%;
+    border-radius: 90px;
+    background-color: #CCF1FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer svg {
+    margin-right: 40px;
+}
