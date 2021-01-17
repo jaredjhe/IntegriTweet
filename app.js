@@ -1,26 +1,26 @@
-import { format } from 'util';
-import express from 'express';
-import Multer, { memoryStorage } from 'multer';
-import { json } from 'body-parser';
+const {format} = require('util');
+const express = require('express');
+const Multer = require('multer');
+const bodyParser = require('body-parser');
 
 // By default, the client will authenticate using the service account file
 // specified by the GOOGLE_APPLICATION_CREDENTIALS environment variable and use
 // the project specified by the GOOGLE_CLOUD_PROJECT environment variable. See
 // https://github.com/GoogleCloudPlatform/google-cloud-node/blob/master/docs/authentication.md
 // These environment variables are set automatically on Google App Engine
-import { Storage } from '@google-cloud/storage';
+const {Storage} = require('@google-cloud/storage');
 
 // Instantiate a storage client
 const storage = new Storage();
 
 const app = express();
 app.set('view engine', 'pug');
-app.use(json());
+app.use('/api', bodyParser.json());
 
 // Multer is required to process file uploads and make them available via
 // req.files.
 const multer = Multer({
-  storage: memoryStorage(),
+  storage: Multer.memoryStorage(),
   limits: {
     fileSize: 5 * 1024 * 1024, // no larger than 5mb, you can change as needed.
   },
