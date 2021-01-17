@@ -39,9 +39,15 @@ const getUserTweets = async () => {
         }
     }
 
-    console.log(userTweets);
-    //console.log(`Got ${userTweets.length} Tweets from ${username}!`);
-
+    let textArray = [];
+    for (i = 0; i < userTweets.length; i++) {
+        let iText = userTweets[i]["text"];
+        if (!(iText.charAt(0) === 'R') && !(iText.charAt(1) === 'T')) {
+            textArray.push(iText);
+        }
+    }
+    
+    return textArray;
 }
 
 const getPage = async (params, options, nextToken) => {
@@ -62,4 +68,4 @@ const getPage = async (params, options, nextToken) => {
     }
 }
 
-getUserTweets();
+module.exports = getUserTweets;
