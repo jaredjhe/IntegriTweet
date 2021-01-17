@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ImGithub } from 'react-icons/im';
+import { Logo } from 'logo.png'
 
 import './App.css';
 import UploadButton from './components/UploadButton'
-import {Upload} from "./Upload";
-import {Files} from "./Files";
+import { Upload } from "./Upload";
+import { Files } from "./Files";
 
 const githubIconStyles = {
     color: "#00ACEE",
@@ -34,7 +35,10 @@ function App() {
             <Upload />
             <Files />
             <header>
-               <h1>Logo</h1>
+                <div className="logo">
+                    <h1>IntegriTweet</h1>
+                    <Logo />
+                </div>
             </header>
             <div className="main">
                 <motion.h1
@@ -42,7 +46,7 @@ function App() {
                     animate={{ x: 0 }}
                     transition={{ type: "spring", duration: 1 }}
                 >
-                    Is this Tweet fake? 
+                    Is this Tweet fake?
                 </motion.h1>
                 <div className="upload-area"
                     style={(isReal) ? { backgroundColor: "#A4FFD1", transition: "all 0.5s ease" } :
@@ -80,9 +84,9 @@ function App() {
                 <button style={{ width: 200 }} onClick={toggleUploaded}>Test Uploaded</button>
                 <button style={{ width: 200 }} onClick={toggleRealTweet}>Test Real</button>
                 /!* ############# FOR TESTING ############# *!/
-                
+
                 <ImGithub style={githubIconStyles} />
-            </footer> 
+            </footer>
         </div>
     );
 }
