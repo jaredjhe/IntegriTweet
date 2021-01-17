@@ -33,7 +33,7 @@ function App() {
         <div className="app">
             <Upload />
             <Files />
-            {/*<header>*/}
+            {/* <header>*/}
             {/*    <h1>Logo</h1>*/}
             {/*</header>*/}
             {/*<div className="main">*/}
@@ -42,7 +42,7 @@ function App() {
             {/*        animate={{ x: 0 }}*/}
             {/*        transition={{ type: "spring", duration: 1 }}*/}
             {/*    >*/}
-            {/*        Is this Tweet fake?*/}
+            {/*        Is this Tweet fake? */}
             {/*    </motion.h1>*/}
             {/*    <div className="upload-area"*/}
             {/*        style={(isReal) ? { backgroundColor: "#A4FFD1", transition: "all 0.5s ease" } :*/}
@@ -82,7 +82,7 @@ function App() {
             {/*    /!* ############# FOR TESTING ############# *!/*/}
             {/*    */}
             {/*    <ImGithub style={githubIconStyles} />*/}
-            {/*</footer>*/}
+            {/*</footer> */}
         </div>
     );
 }
