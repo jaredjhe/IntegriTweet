@@ -1,10 +1,5 @@
 const needle = require('needle');
 
-// export 'CONSUMER_KEY'='Tk4Ozfhr47hvHBw5MMS1xUAYZ'
-// export 'CONSUMER_SECRET'='Tv6xXsZ7nRFHPFeMxRmxTLNf7HHYfupL3LhV1NhZOXCNuCYPbB'
-
-//const userId = 2288122417;
-// const userId = 2244994945;
 const userId = 17995040;
 const url = `https://api.twitter.com/2/users/${userId}/tweets`;
 const bearerToken = process.env.BEARER_TOKEN;
@@ -39,9 +34,15 @@ const getUserTweets = async () => {
         }
     }
 
-    console.log(userTweets);
-    //console.log(`Got ${userTweets.length} Tweets from ${username}!`);
-
+    let textArray = [];
+    for (i = 0; i < userTweets.length; i++) {
+        let iText = userTweets[i]["text"];
+        if (!(iText.charAt(0) === 'R') && !(iText.charAt(1) === 'T')) {
+            textArray.push(iText);
+        }
+    }
+    
+    return textArray;
 }
 
 const getPage = async (params, options, nextToken) => {
@@ -62,4 +63,4 @@ const getPage = async (params, options, nextToken) => {
     }
 }
 
-getUserTweets();
+module.exports = getUserTweets;
