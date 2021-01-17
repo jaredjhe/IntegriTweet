@@ -9,7 +9,7 @@ const quickstart = async () => {
     const client = new vision.ImageAnnotatorClient();
 
     // Performs label detection on the image file
-    const [result] = await client.textDetection('/Users/rithin/WebstormProjects/Tweet-Detector-Updated/Google Cloud/resources/Ben_Shapiro_True_1.png');
+    const [result] = await client.textDetection('src\function\Google Cloud\resources\Ben_Shapiro_True_1.png');
     const text = result.textAnnotations;
     const textAsArray = [];
     text.forEach(text => textAsArray.push(text.description));
