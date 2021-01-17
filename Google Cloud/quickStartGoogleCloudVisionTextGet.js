@@ -1,6 +1,7 @@
 
 // https://cloud.google.com/docs/authentication/getting-started#windows
 // export GOOGLE_APPLICATION_CREDENTIALS="/Users/rithin/WebstormProjects/Tweet-Detector-Updated/Google Cloud Credentials/rithin2/tweetdetector-2798f64a0cce.json"
+
 const quickstart = async () => {
     // Imports the Google Cloud client library
     const vision = require('@google-cloud/vision');
@@ -9,7 +10,7 @@ const quickstart = async () => {
     const client = new vision.ImageAnnotatorClient();
 
     // Performs label detection on the image file
-    const [result] = await client.textDetection('/Users/rithin/WebstormProjects/Tweet-Detector-Updated/Google Cloud/resources/Ben_Shapiro_True_1.png');
+    const [result] = await client.textDetection('./Google Cloud/resources/Ben_Shapiro_True_1.png');
     const text = result.textAnnotations;
     const textAsArray = [];
     text.forEach(text => textAsArray.push(text.description));
@@ -20,9 +21,15 @@ const quickstart = async () => {
 async function main() {
     // [START vision_quickstart]
     const words = await quickstart();
-    console.log('Text:');
-    console.log(words[0]);
+    const paragraph = parseTextAsArray(words[0]);
+    console.log(paragraph);
+    return paragraph;
     // [END vision_quickstart]
+}
+
+function parseTextAsArray(word) {
+    let array = word.split(/\r?\n/);
+    return array.slice(1, array.length - 5);
 }
 
 process.on('unhandledRejection', err => {

@@ -9,6 +9,7 @@ const uploadIconStyles = {
 function UploadButton() {
 
     const handleUpload = () => {
+        
         fetch('/app/').then(res => {
             if (res.ok) {
 
@@ -16,10 +17,10 @@ function UploadButton() {
         }).then(jsonResponse => console.log(jsonResponse))
     }
 
-    return(
+    return (
         <div onClick={handleUpload} className="upload-button">
             <p>Choose a file</p>
-            <MdCloudUpload style={uploadIconStyles}/>
+            <MdCloudUpload style={uploadIconStyles} />
         </div>
     )
 }
