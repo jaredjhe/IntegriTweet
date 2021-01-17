@@ -3,7 +3,6 @@ const needle = require('needle');
 // The code below sets the bearer token from your environment variables
 // To set environment variables on Mac OS X, run the export command below from the terminal:
 //// https://cloud.google.com/docs/authentication/getting-started#windows
-// export BEARER_TOKEN='AAAAAAAAAAAAAAAAAAAAABpeLwEAAAAAP0GJmlBY%2BnDzcQixSH9IRvWazgA%3DVYKA3Hr6kh43URpxEftNKVgG5dCPfKAJ30SAMYn8Fj0QQ1thsQ'
 const token = process.env.BEARER_TOKEN;
 
 const endpointURL = "https://api.twitter.com/2/users/by?usernames="

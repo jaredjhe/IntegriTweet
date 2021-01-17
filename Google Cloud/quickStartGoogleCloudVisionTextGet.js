@@ -18,7 +18,7 @@ const quickstart = async () => {
 }
 
 'use strict';
-async function main() {
+const main = async () => {
     // [START vision_quickstart]
     const words = await quickstart();
     const paragraph = parseTextAsArray(words[0]);
@@ -38,3 +38,5 @@ process.on('unhandledRejection', err => {
 });
 
 main(...process.argv.slice(2));
+
+module.exports = main; 

@@ -1,10 +1,5 @@
 const needle = require('needle');
 
-// export 'CONSUMER_KEY'='Tk4Ozfhr47hvHBw5MMS1xUAYZ'
-// export 'CONSUMER_SECRET'='Tv6xXsZ7nRFHPFeMxRmxTLNf7HHYfupL3LhV1NhZOXCNuCYPbB'
-
-//const userId = 2288122417;
-// const userId = 2244994945;
 const userId = 17995040;
 const url = `https://api.twitter.com/2/users/${userId}/tweets`;
 const bearerToken = process.env.BEARER_TOKEN;
