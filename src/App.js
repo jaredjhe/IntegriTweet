@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ImGithub } from 'react-icons/im';
-import { Logo } from 'logo.png'
 
 import './App.css';
 import UploadButton from './components/UploadButton'
-import { Upload } from "./Upload";
-import { Files } from "./Files";
 
 const githubIconStyles = {
     color: "#00ACEE",
@@ -32,12 +29,9 @@ function App() {
 
     return (
         <div className="app">
-            <Upload />
-            <Files />
             <header>
                 <div className="logo">
                     <h1>IntegriTweet</h1>
-                    <Logo />
                 </div>
             </header>
             <div className="main">
@@ -84,7 +78,6 @@ function App() {
                 <button style={{ width: 200 }} onClick={toggleUploaded}>Test Uploaded</button>
                 <button style={{ width: 200 }} onClick={toggleRealTweet}>Test Real</button>
                 {/* ############# FOR TESTING ############# */}
-
                 <ImGithub style={githubIconStyles} />
             </footer>
         </div>
