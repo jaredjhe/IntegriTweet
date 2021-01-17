@@ -33,56 +33,56 @@ function App() {
         <div className="app">
             <Upload />
             <Files />
-            {/* <header>*/}
-            {/*    <h1>Logo</h1>*/}
-            {/*</header>*/}
-            {/*<div className="main">*/}
-            {/*    <motion.h1*/}
-            {/*        initial={{ x: -100 }}*/}
-            {/*        animate={{ x: 0 }}*/}
-            {/*        transition={{ type: "spring", duration: 1 }}*/}
-            {/*    >*/}
-            {/*        Is this Tweet fake? */}
-            {/*    </motion.h1>*/}
-            {/*    <div className="upload-area"*/}
-            {/*        style={(isReal) ? { backgroundColor: "#A4FFD1", transition: "all 0.5s ease" } :*/}
-            {/*            ((isFake) ? { backgroundColor: "#FFC6B8", transition: "all 0.5s ease" } :*/}
-            {/*                { transition: "all 0.5s ease" })}*/}
-            {/*    >*/}
-            {/*        <motion.div*/}
-            {/*            initial={{ y: -100, opacity: 0 }}*/}
-            {/*            animate={{ y: 0, opacity: 1 }}*/}
-            {/*            transition={{ type: "spring", duration: 2 }}*/}
-            {/*        >*/}
-            {/*            <UploadButton*/}
-            {/*                isUploaded={isUploaded}*/}
-            {/*                toggleUploaded={toggleUploaded}*/}
-            {/*                isRealTweet={isRealTweet}*/}
-            {/*                toggleRealTweet={toggleRealTweet}*/}
-            {/*            />*/}
-            {/*        </motion.div>*/}
-            {/*    </div>*/}
-            {/*    {(isReal) ? <motion.h1*/}
-            {/*        initial={{ x: -300 }}*/}
-            {/*        animate={{ x: 0 }}*/}
-            {/*    >*/}
-            {/*        Yes, this tweet is <span style={{ color: "#00CC66" }}>real!</span>*/}
-            {/*    </motion.h1> : <></>}*/}
-            {/*    {(isFake) ? <motion.h1*/}
-            {/*        initial={{ x: -300 }}*/}
-            {/*        animate={{ x: 0 }}*/}
-            {/*    >*/}
-            {/*        Oh no, this tweet is <span style={{ color: "#FF3300" }}>fake!</span>*/}
-            {/*    </motion.h1> : <></>}*/}
-            {/*</div>*/}
-            {/*<footer>*/}
-            {/*    /!* ############# FOR TESTING ############# *!/*/}
-            {/*    <button style={{ width: 200 }} onClick={toggleUploaded}>Test Uploaded</button>*/}
-            {/*    <button style={{ width: 200 }} onClick={toggleRealTweet}>Test Real</button>*/}
-            {/*    /!* ############# FOR TESTING ############# *!/*/}
-            {/*    */}
-            {/*    <ImGithub style={githubIconStyles} />*/}
-            {/*</footer> */}
+            <header>
+               <h1>Logo</h1>
+            </header>
+            <div className="main">
+                <motion.h1
+                    initial={{ x: -100 }}
+                    animate={{ x: 0 }}
+                    transition={{ type: "spring", duration: 1 }}
+                >
+                    Is this Tweet fake? 
+                </motion.h1>
+                <div className="upload-area"
+                    style={(isReal) ? { backgroundColor: "#A4FFD1", transition: "all 0.5s ease" } :
+                        ((isFake) ? { backgroundColor: "#FFC6B8", transition: "all 0.5s ease" } :
+                            { transition: "all 0.5s ease" })}
+                >
+                    <motion.div
+                        initial={{ y: -100, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ type: "spring", duration: 2 }}
+                    >
+                        <UploadButton
+                            isUploaded={isUploaded}
+                            toggleUploaded={toggleUploaded}
+                            isRealTweet={isRealTweet}
+                            toggleRealTweet={toggleRealTweet}
+                        />
+                    </motion.div>
+                </div>
+                {(isReal) ? <motion.h1
+                    initial={{ x: -300 }}
+                    animate={{ x: 0 }}
+                >
+                    Yes, this tweet is <span style={{ color: "#00CC66" }}>real!</span>
+                </motion.h1> : <></>}
+                {(isFake) ? <motion.h1
+                    initial={{ x: -300 }}
+                    animate={{ x: 0 }}
+                >
+                    Oh no, this tweet is <span style={{ color: "#FF3300" }}>fake!</span>
+                </motion.h1> : <></>}
+            </div>
+            <footer>
+                /!* ############# FOR TESTING ############# *!/
+                <button style={{ width: 200 }} onClick={toggleUploaded}>Test Uploaded</button>
+                <button style={{ width: 200 }} onClick={toggleRealTweet}>Test Real</button>
+                /!* ############# FOR TESTING ############# *!/
+                
+                <ImGithub style={githubIconStyles} />
+            </footer> 
         </div>
     );
 }
