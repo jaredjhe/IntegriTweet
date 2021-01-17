@@ -80,10 +80,10 @@ function App() {
                 </motion.h1> : <></>}
             </div>
             <footer>
-                /!* ############# FOR TESTING ############# *!/
+                {/* ############# FOR TESTING ############# */}
                 <button style={{ width: 200 }} onClick={toggleUploaded}>Test Uploaded</button>
                 <button style={{ width: 200 }} onClick={toggleRealTweet}>Test Real</button>
-                /!* ############# FOR TESTING ############# *!/
+                {/* ############# FOR TESTING ############# */}
 
                 <ImGithub style={githubIconStyles} />
             </footer>
